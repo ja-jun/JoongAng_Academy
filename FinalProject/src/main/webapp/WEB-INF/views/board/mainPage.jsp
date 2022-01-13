@@ -32,7 +32,7 @@
 		<c:forEach items="${dataList }" var="data">
 			<tr>
 				<td>${data.boardVo.board_no }</td>
-				<td>${data.boardVo.board_title }</td>
+				<td><a href="./readContentPage?board_no=${data.boardVo.board_no }">${data.boardVo.board_title }</a></td>
 				<td>${data.memberVo.member_nick }</td>
 				<td>${data.boardVo.board_writedate }</td>
 				<td>${data.boardVo.board_readcount }</td>

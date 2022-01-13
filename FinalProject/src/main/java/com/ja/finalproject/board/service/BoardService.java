@@ -45,4 +45,18 @@ public class BoardService {
 		
 		return dataList;
 	}
+	
+	public HashMap<String, Object> getBoard(int board_no){
+		
+		HashMap<String, Object> map = new HashMap<String, Object>();
+		
+		BoardVo boardVo = boardSQLMapper.getBoardByNo(board_no);
+		int memberNo = boardVo.getMember_no();
+		MemberVo memberVo = memberSQLMapper.getMemberByNo(memberNo);
+		
+		map.put("memberVo", memberVo);
+		map.put("boardVo", boardVo);
+		
+		return map;
+	}
 }

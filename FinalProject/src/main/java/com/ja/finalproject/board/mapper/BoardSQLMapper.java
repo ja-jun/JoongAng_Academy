@@ -13,4 +13,6 @@ public interface BoardSQLMapper {
 	
 	public ArrayList<BoardVo> getBoardList(); // 1개의 행을 받을 때는 단일 객체 리턴, N개의 행을 받을 때는 List계열로 받는다.
 		
+	public BoardVo getBoardByNo(int no);
+		
 }

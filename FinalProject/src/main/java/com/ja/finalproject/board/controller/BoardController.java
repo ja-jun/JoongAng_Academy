@@ -55,5 +55,14 @@ public class BoardController {
 		return "redirect:./mainPage";
 		
 	}
+	
+	@RequestMapping("readContentPage")
+	public String readContentPage(int board_no , Model model) {
+		
+		HashMap<String, Object> map = boardService.getBoard(board_no);
+		model.addAttribute("data", map);
+		
+		return "board/readContentPage";
+	}
 		
 }
