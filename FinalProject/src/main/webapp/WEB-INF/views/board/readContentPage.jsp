@@ -18,10 +18,10 @@
 	${data.boardVo.board_content }<br>
 	
 	<a href="./mainPage">목록으로</a>
-	
+	<!-- ? : 링크에서 파라미터(추가적 정보) 보내는 방법 -->
 	<c:if test="${!empty sessionUser && sessionUser.member_no == data.boardVo.member_no }">
-		<a>수정</a>
-		<a>삭제</a>
+		<a href="./deleteContentProcess?board_no=${data.boardVo.board_no }">삭제</a>
+		<a href="./updateContentPage?board_no=${data.boardVo.board_no }">수정</a>		
 	</c:if>
 </body>
 </html>

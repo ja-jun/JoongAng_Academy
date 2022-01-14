@@ -59,4 +59,18 @@ public class BoardService {
 		
 		return map;
 	}
+	
+	public void increaseReadCount(int board_no) {
+		boardSQLMapper.increaseReadCount(board_no);
+	}
+	
+	public void deleteBoard(int board_no) {
+		// 예외.. 처리..
+		
+		boardSQLMapper.deleteBoard(board_no);
+	}
+	
+	public void updateBoard(BoardVo vo) {
+		boardSQLMapper.updateBoard(vo);
+	}
 }
